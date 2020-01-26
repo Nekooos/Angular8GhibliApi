@@ -17,11 +17,9 @@ export class MovieComponent implements OnInit {
     this.route.params.subscribe(data => {
       this.movieId = data['id'];
     });
-    this.http.getMovie(this.movieId).subscribe(data => {
+    this.http.getById('films', this.movieId).subscribe(data => {
       this.movie = data;
     });
   }
-
- 
 
 }

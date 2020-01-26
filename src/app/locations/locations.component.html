@@ -3,9 +3,9 @@
 <ul *ngIf="locations">
     <li *ngFor="let location of locations">
         <ul>
-            <a [routerLink]="['/location', location.id]">
-                <li class="location__item">{{ location.name }} </li>
-                <li class="location__item">{{ location.films }} </li>
+            <a [routerLink]="['/locations', location.id]">
+                <li class="locations__item">{{ location.name }} </li>
+                <li class="locations__item">{{ location.films }} </li>
             </a>
         </ul>
     </li>

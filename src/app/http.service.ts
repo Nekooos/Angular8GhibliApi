@@ -9,36 +9,11 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  getMovies() {
-    return this.http.get(this.url + 'films');
+  getAll(subject: string) {
+    return this.http.get(this.url + subject);
   }
 
-  getMovie(id: string) {
-    return this.http.get(this.url + 'films/' + id);
+  getById(subject: string, id: string) {
+    return this.http.get(this.url + subject + '/' + id);
   }
-
-  getPeoples() {
-    return this.http.get(this.url + 'people');
-  }
-
-  getPeople(id: string) {
-    return this.http.get(this.url + 'people/' + id);
-  }
-
-  getLocations() {
-    return this.http.get(this.url + 'locations');
-  }
-
-  getLocation(id: string) {
-    return this.http.get(this.url + 'locations/' + id);
-  }
-
-  getSpecies() {
-    return this.http.get(this.url + 'species');
-  }
-
-  getSpecie(id: string) {
-    return this.http.get(this.url + 'species/' + id);
-  }
-
 }

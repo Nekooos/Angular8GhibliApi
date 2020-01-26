@@ -1,1 +1,8 @@
-<p>location works!</p>
+<ul *ngIf="location">
+    <li>Name: {{ location.name }}</li>
+    <li>Climate: {{ location.climate }}</li>
+    <li>Terrain: {{ location.terrain }}</li>
+    <li>Above sea level: {{ location.surface_water }}</li>
+    <li>residents: {{ location.residents }}</li>
+    <li>films: {{ location.films }}</li>
+</ul>

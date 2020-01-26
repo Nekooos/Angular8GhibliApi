@@ -14,7 +14,7 @@ export class PeoplesComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-   this.http.getPeoples().subscribe(peoples => {
+   this.http.getAll('people').subscribe(peoples => {
     this.peoples = peoples;
     console.log(peoples);
    });

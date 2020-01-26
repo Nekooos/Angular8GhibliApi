@@ -1,1 +1,9 @@
-<p>people works!</p>
+<ul *ngIf="people">
+    <li>Title: {{ people.name }}</li>
+    <li>Description: {{ people.gender }}</li>
+    <li>Age: : {{ people.age }}</li>
+    <li>Eye color: {{ people.eye_color }}</li>
+    <li>Hair color: {{ people.hair_color }}</li>
+    <li>Film: {{ people.films }}</li>
+    <li>Specie: {{ people.species }}</li>
+</ul>

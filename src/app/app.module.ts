@@ -14,6 +14,8 @@ import { SpeciesComponent } from './species/species.component';
 import { SpecieComponent } from './specie/specie.component';
 import { PeopleComponent } from './people/people.component';
 import { LocationComponent } from './location/location.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { LocationComponent } from './location/location.component';
     SpeciesComponent,
     SpecieComponent,
     PeopleComponent,
-    LocationComponent
+    LocationComponent,
+    VehiclesComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,

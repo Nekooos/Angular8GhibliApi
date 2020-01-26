@@ -13,7 +13,7 @@ export class SpeciesComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.http.getSpecies().subscribe(species => {
+    this.http.getAll('species').subscribe(species => {
       this.species = species;
     });
   }

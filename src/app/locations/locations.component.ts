@@ -13,7 +13,7 @@ export class LocationsComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.http.getLocations().subscribe(locations => {
+    this.http.getAll('locations').subscribe(locations => {
       this.locations = locations;
       console.log(locations);
      });

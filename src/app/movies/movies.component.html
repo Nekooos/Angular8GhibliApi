@@ -4,9 +4,12 @@
     <li *ngFor="let movie of movies">
         <ul class="movie">
             <a [routerLink]="['/movie', movie.id]">
-                <li class="name">{{ movie.title }}</li>
-                <li class="release_date">{{ movie.release_date }} </li>
-                <li class="rating">{{ movie.rt_score }}</li>
+                <li>{{ movie.title }}</li>
+                <li>{{ movie.release_date }} </li>
+                <li>{{ movie.rt_score }}</li>
+                <li>{{ movie.producer }}</li>
+                <li>{{ movie.release_date }}</li>
+                <li>{{ movie.score }}</li>
             </a>
         </ul>
     </li>

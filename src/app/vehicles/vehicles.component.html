@@ -1,0 +1,12 @@
+<h2>Vehicles</h2>
+
+<ul *ngIf="vehicles">
+    <li *ngFor="let vehicle of vehicles">
+        <ul>
+            <a [routerLink]="['/vehicles', vehicle.id]">
+                <li class="vehicle__item">{{ vehicle.name }} </li>
+                <li class="vehicle__item">{{ vehicle.films }} </li>
+            </a>
+        </ul>
+    </li>
+</ul>

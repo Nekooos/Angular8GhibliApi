@@ -3,7 +3,7 @@
 <ul *ngIf="species">
     <li *ngFor="let specie of species">
         <ul>
-            <a [routerLink]="['/specie', specie.id]">
+            <a [routerLink]="['/species', specie.id]">
                 <li class="specie__item">{{ specie.name }} </li>
                 <li class="specie__item">{{ specie.films }} </li>
             </a>
