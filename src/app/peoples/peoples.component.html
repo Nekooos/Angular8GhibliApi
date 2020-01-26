@@ -1,0 +1,10 @@
+<h2>Peoples</h2>
+
+<li *ngFor="let people of peoples">
+    <ul class="people">
+        <a [routerLink]="['/people', people.id]">
+            <li class="people__item">{{ people.name }}</li>
+            <li class="people__item">{{ people.films }} </li>
+        </a>
+    </ul>
+</li>

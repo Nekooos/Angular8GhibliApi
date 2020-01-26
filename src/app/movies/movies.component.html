@@ -1,0 +1,13 @@
+<h1>Studio Ghibli Movies</h1>
+
+<ul *ngIf="movies">
+    <li *ngFor="let movie of movies">
+        <ul class="movie">
+            <a [routerLink]="['/movie', movie.id]">
+                <li class="name">{{ movie.title }}</li>
+                <li class="release_date">{{ movie.release_date }} </li>
+                <li class="rating">{{ movie.rt_score }}</li>
+            </a>
+        </ul>
+    </li>
+</ul>
