@@ -4,8 +4,16 @@ $primary: rgb(111, 0, 255);
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Nunito', 'sans-serif';
     font-size: 16px;
+}
+
+ul {
+    li {
+        padding: 0;
+        display: inline;
+    }
 }
 
 

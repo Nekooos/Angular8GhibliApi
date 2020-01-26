@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-species',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpeciesComponent implements OnInit {
 
-  constructor() { }
+  species: Object;
+
+  constructor(private http: HttpService) { }
 
   ngOnInit() {
+    this.http.getSpecies().subscribe(species => {
+      this.species = species;
+    });
   }
 
 }

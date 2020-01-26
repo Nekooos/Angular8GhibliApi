@@ -1,1 +1,12 @@
-<p>locations works!</p>
+<h2>Locations</h2>
+
+<ul *ngIf="locations">
+    <li *ngFor="let location of locations">
+        <ul>
+            <a [routerLink]="['/location', location.id]">
+                <li class="location__item">{{ location.name }} </li>
+                <li class="location__item">{{ location.films }} </li>
+            </a>
+        </ul>
+    </li>
+</ul>

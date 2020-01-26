@@ -21,4 +21,24 @@ export class HttpService {
     return this.http.get(this.url + 'people');
   }
 
+  getPeople(id: string) {
+    return this.http.get(this.url + 'people/' + id);
+  }
+
+  getLocations() {
+    return this.http.get(this.url + 'locations');
+  }
+
+  getLocation(id: string) {
+    return this.http.get(this.url + 'locations/' + id);
+  }
+
+  getSpecies() {
+    return this.http.get(this.url + 'species');
+  }
+
+  getSpecie(id: string) {
+    return this.http.get(this.url + 'species/' + id);
+  }
+
 }

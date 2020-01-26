@@ -1,1 +1,12 @@
-<p>species works!</p>
+<h2>Species</h2>
+
+<ul *ngIf="species">
+    <li *ngFor="let specie of species">
+        <ul>
+            <a [routerLink]="['/specie', specie.id]">
+                <li class="specie__item">{{ specie.name }} </li>
+                <li class="specie__item">{{ specie.films }} </li>
+            </a>
+        </ul>
+    </li>
+</ul>

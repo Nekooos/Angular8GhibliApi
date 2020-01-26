@@ -11,6 +11,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PeoplesComponent } from './peoples/peoples.component';
 import { LocationsComponent } from './locations/locations.component';
 import { SpeciesComponent } from './species/species.component';
+import { SpecieComponent } from './specie/specie.component';
+import { PeopleComponent } from './people/people.component';
+import { LocationComponent } from './location/location.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { SpeciesComponent } from './species/species.component';
     PageNotFoundComponent,
     PeoplesComponent,
     LocationsComponent,
-    SpeciesComponent
+    SpeciesComponent,
+    SpecieComponent,
+    PeopleComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,

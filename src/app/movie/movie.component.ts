@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-movie',
@@ -12,19 +11,17 @@ export class MovieComponent implements OnInit {
   movie: Object;
   movieId: string;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private http: HttpService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(data => {
       this.movieId = data['id'];
     });
-    this.getMovie(this.movieId).subscribe(data => {
+    this.http.getMovie(this.movieId).subscribe(data => {
       this.movie = data;
     });
   }
 
-  getMovie(id: string) {
-    return this.http.get('https://ghibliapi.herokuapp.com/films/'+id);
-  }
+ 
 
 }
