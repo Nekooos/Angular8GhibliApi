@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
+import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-vehicle',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vehicle.component.scss']
 })
 export class VehicleComponent implements OnInit {
+  vehicleId: string;
+  vehicle: Object;
 
-  constructor() { }
+  constructor(private http:HttpService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(data => {
+      this.vehicleId = data['id'];
+    });
+    this.http.getById('vehicles', this.vehicleId).subscribe(vehicle => {
+      this.vehicle = vehicle;
+    });
   }
 
 }
