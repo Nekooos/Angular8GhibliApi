@@ -4,6 +4,7 @@ import { HttpService } from '../service/http.service';
 import { People } from '../models/People';
 import { MoviesService } from '../service/movies.service';
 import { Movie } from '../models/Movie';
+import { Location } from '../models/Location';
 
 @Component({
   selector: 'app-movie',

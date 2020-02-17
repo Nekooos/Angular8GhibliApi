@@ -14,7 +14,7 @@ export class NavigationComponent implements OnInit {
   }
 
   toogleNav(): void {
-    //document.getElementById("checkbox").checked = false;
+    const checkBox = document.getElementById("navi-toggle") as HTMLInputElement;
+    checkBox.checked = false;
   }
-
 }
