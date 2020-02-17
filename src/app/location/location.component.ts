@@ -21,5 +21,4 @@ export class LocationComponent implements OnInit {
       this.location = data as Location;
     });
   }
-
 }

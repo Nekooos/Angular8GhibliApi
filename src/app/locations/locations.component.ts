@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../service/http.service';
+import { Location } from '../models/Location';
 
 @Component({
   selector: 'app-locations',
