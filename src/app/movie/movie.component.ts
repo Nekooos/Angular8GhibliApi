@@ -27,7 +27,6 @@ export class MovieComponent implements OnInit {
     });*/
 
     this.http.getGenericById('films', this.movieId).subscribe(data => {
-      console.log(data);
       this.movie = data as Movie;
     })
   }

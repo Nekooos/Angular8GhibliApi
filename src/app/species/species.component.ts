@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../service/http.service';
+import { Specie } from '../models/Specie';
 
 @Component({
   selector: 'app-species',
@@ -8,13 +9,13 @@ import { HttpService } from '../service/http.service';
 })
 export class SpeciesComponent implements OnInit {
 
-  species: Object;
+  species: Specie[];
 
   constructor(private http: HttpService) { }
 
   ngOnInit() {
     this.http.getAll('species').subscribe(species => {
-      this.species = species;
+      this.species = species as Specie[];
     });
   }
 

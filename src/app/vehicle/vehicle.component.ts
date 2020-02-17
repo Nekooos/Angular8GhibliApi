@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../service/http.service';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
+import { Vehicle } from '../models/Vehicle';
 
 @Component({
   selector: 'app-vehicle',
@@ -10,7 +11,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class VehicleComponent implements OnInit {
   vehicleId: string;
-  vehicle: Object;
+  vehicle: Vehicle;
 
   constructor(private http:HttpService, private route: ActivatedRoute) { }
 
@@ -19,7 +20,7 @@ export class VehicleComponent implements OnInit {
       this.vehicleId = data['id'];
     });
     this.http.getById('vehicles', this.vehicleId).subscribe(vehicle => {
-      this.vehicle = vehicle;
+      this.vehicle = vehicle as Vehicle;
     });
   }
 

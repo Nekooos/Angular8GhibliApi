@@ -8,14 +8,14 @@ import { HttpService } from '../service/http.service';
 })
 export class LocationsComponent implements OnInit {
 
-  locations: Object;
+  locations: Location[];
 
   constructor(private http: HttpService) { }
 
   ngOnInit() {
     this.http.getAll('locations').subscribe(locations => {
-      this.locations = locations;
-      console.log(locations);
+      this.locations = locations as Location[];
+
      });
   }
 

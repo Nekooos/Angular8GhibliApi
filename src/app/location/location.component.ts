@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./location.component.scss']
 })
 export class LocationComponent implements OnInit {
-  location: Object;
+  location: Location;
   locationId: string;
 
   constructor(private http: HttpService, private route: ActivatedRoute) { }
@@ -18,7 +18,7 @@ export class LocationComponent implements OnInit {
       this.locationId = data['id'];
     });
     this.http.getById('locations' ,this.locationId).subscribe(data => {
-      this.location = data;
+      this.location = data as Location;
     });
   }
 

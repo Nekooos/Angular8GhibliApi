@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { HttpService } from '../service/http.service';
+import { Specie } from '../models/Specie';
 
 @Component({
   selector: 'app-specie',
@@ -10,7 +11,7 @@ import { HttpService } from '../service/http.service';
 })
 export class SpecieComponent implements OnInit {
   specieId: string;
-  specie: Object;
+  specie: Specie;
 
   constructor(private http: HttpService, private route: ActivatedRoute) { }
 
@@ -19,7 +20,7 @@ export class SpecieComponent implements OnInit {
       this.specieId = data['id'];
     });
     this.http.getById('species', this.specieId).subscribe(data => {
-      this.specie = data;
+      this.specie = data as Specie;
     });
   }
 
