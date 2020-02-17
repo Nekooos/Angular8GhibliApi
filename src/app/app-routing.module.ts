@@ -27,7 +27,6 @@ const routes: Routes = [
   { path: 'vehicles/:id', component: VehicleComponent },
   { path: '', redirectTo: '/movies', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
-
 ];
 
 @NgModule({

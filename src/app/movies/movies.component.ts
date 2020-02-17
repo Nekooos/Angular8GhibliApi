@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../http.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpService } from '../service/http.service';
+import { Movie } from '../models/Movie';
+import { MoviesService } from '../service/movies.service';
 
 @Component({
   selector: 'app-movies',
@@ -9,17 +10,26 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MoviesComponent implements OnInit {
 
-  movies: Object;
+  moviesArray: Movie[] = [];
+  selectedMovie: Movie;
 
-  constructor(private http: HttpService) { 
+  constructor(private http: HttpService, private movieService: MoviesService) { 
 
   }
 
   ngOnInit() {
-    this.http.getAll('films').subscribe(data => {
-      this.movies = data;
-      console.log(this.movies);
-    });
+    this.http.getAllGeneric('films').subscribe(movies => {
+      this.moviesArray = movies as Movie[]
+    });    
   }
 
-}
+  onSelect(movie: Movie): void {
+    this.selectedMovie = movie;
+  }
+
+  sortItems() {
+    const movies = this.movieService.sortMoviesByDate(this.moviesArray);
+    console.log(movies);
+  }
+}    
+

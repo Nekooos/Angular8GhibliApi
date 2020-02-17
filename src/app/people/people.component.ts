@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../http.service';
+import { HttpService } from '../service/http.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PeopleComponent implements OnInit {
   peopleId: string;
   people: Object;
+  movies: Object;
 
   constructor(private http: HttpService, private route: ActivatedRoute) { }
 

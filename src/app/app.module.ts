@@ -16,6 +16,9 @@ import { PeopleComponent } from './people/people.component';
 import { LocationComponent } from './location/location.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { OrderByPipe } from './order-by.pipe';
+import { NavigationComponent } from './navigation/navigation.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { VehicleComponent } from './vehicle/vehicle.component';
     PeopleComponent,
     LocationComponent,
     VehiclesComponent,
-    VehicleComponent
+    VehicleComponent,
+    OrderByPipe,
+    NavigationComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

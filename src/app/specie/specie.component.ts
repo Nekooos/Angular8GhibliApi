@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
-import { HttpService } from '../http.service';
+import { HttpService } from '../service/http.service';
 
 @Component({
   selector: 'app-specie',
