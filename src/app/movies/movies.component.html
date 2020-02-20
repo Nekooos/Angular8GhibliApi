@@ -1,24 +1,10 @@
 <h1>Movies</h1>
 
 <ul *ngIf="moviesArray">
-    <!--<span *ngIf="selectedMovie"> {{ selectedMovie.description }}</span>-->
-
-    <nav>
-        <ul>
-            <li class="item__navigation" (click)="sortItems('release')">Release date </li>
-            <li class="item__navigation" (click)="sortItems('score')">Score</li>
-        </ul>
-    </nav>
-
     <li *ngFor="let movie of moviesArray" (click)="onSelect(movie)">
-        <ul class="movie">
-            <!--<li><a [routerLink]="['/movie', movie.id]">{{ movie.title }}</a></li>-->
-            <li class="movie__item" >
-                <a [routerLink]="['/movie', movie.id]">
-                    <span class="movie__item__span">{{ movie.title }}</span>
-                    <span class="movie__item__span">{{ movie.release_date }}</span>
-                </a>
-            </li>
-        </ul>
+        <a [routerLink]="['/movie', movie.id]">
+            <span class="movie__item__span">{{ movie.title }}</span>
+            <span class="movie__item__span">{{ movie.release_date }}</span>
+        </a>
     </li>
 </ul>

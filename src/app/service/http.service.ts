@@ -34,4 +34,8 @@ export class HttpService {
   getById(subject: string, id: string) {
     return this.http.get(this.url + subject + '/' + id);
   }
+
+  getByUrl(url: string) {
+    return this.http.get(url);
+  }
 }

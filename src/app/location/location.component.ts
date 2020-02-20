@@ -18,7 +18,8 @@ export class LocationComponent implements OnInit {
     this.route.params.subscribe(data => {
       this.locationId = data['id'];
     });
-    this.http.getById('locations' ,this.locationId).subscribe(data => {
+
+    this.http.getById('locations', this.locationId).subscribe(data => { 
       this.location = data as Location;
     });
   }

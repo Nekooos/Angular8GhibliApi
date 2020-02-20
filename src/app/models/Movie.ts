@@ -9,8 +9,8 @@ export class Movie {
     producer: string;
     releaseDate: number;
     score: number;
-    people: People[];
-    species: Specie[];
-    locations: Location[];
-    vehicle: Vehicle[];
+    people: string[];
+    species: string[];
+    locations: string[];
+    vehicle: string[];
 }
