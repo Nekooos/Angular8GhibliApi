@@ -1,9 +1,9 @@
-<ul *ngIf="people">
-    <li>Title: {{ people.name }}</li>
-    <li>Description: {{ people.gender }}</li>
-    <li>Age: : {{ people.age }}</li>
-    <li>Eye color: {{ people.eye_color }}</li>
-    <li>Hair color: {{ people.hair_color }}</li>
-    <li>Film: {{ people.films }}</li>
-    <li>Specie: {{ people.species }}</li>
-</ul>
+<div *ngIf="people">
+    <h1>Title: {{ people.name }}</h1>
+    <p>Description: {{ people.gender }}</p>
+    <p>Age: : {{ people.age }}</p>
+    <p>Eye color: {{ people.eye_color }}</p>
+    <p>Hair color: {{ people.hair_color }}</p>
+    <p *ngFor="let movie of movies"> {{ movie.title }}</p>
+    <p *ngIf="specie"> {{ specie.name }}</p>
+</div>

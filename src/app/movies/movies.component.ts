@@ -29,7 +29,6 @@ export class MoviesComponent implements OnInit {
 
   sortItems() {
     const movies = this.movieService.sortMoviesByDate(this.moviesArray);
-    console.log(movies);
   }
 }    
 

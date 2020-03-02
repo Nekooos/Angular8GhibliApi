@@ -38,4 +38,8 @@ export class HttpService {
   getByUrl(url: string) {
     return this.http.get(url);
   }
+
+  getByParameter(parameter: string, value:string) {
+    return this.http.get(this.url + parameter + '?=' + value);
+  }
 }

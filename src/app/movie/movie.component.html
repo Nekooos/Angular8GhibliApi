@@ -1,12 +1,18 @@
 <h1 *ngIf="movie">{{ movie.title }}</h1>
 
-<ul *ngIf="movie">
-    <li>Description: {{ movie.description }}</li>
-    <li>Director: {{ movie.director }}</li>
-    <li>Producer: {{ movie.producer }}</li>
-    <li>score: {{ movie.rt_score }}</li>
-    <li *ngFor="let people of peoples" >People: {{ people.name }}</li>
-    <li>species: {{ movie.species }}</li>
-    <li>locations: {{ movie.locations }}</li>
-    <li>vehicles: {{ movie.vehicles }}</li>
-</ul>
+<div *ngIf="movie">
+    <h2>Description:</h2>
+    <p >{{ movie.description }}</p>
+    <h2>Director:</h2>
+    <p>{{ movie.director }}</p>
+    <h2>Producer:</h2>
+    <p>{{ movie.producer }}</p>
+    <h2>Score:</h2>
+    <p>{{ movie.rt_score }}</p>
+    <!--
+    <p *ngFor="let people of peoples" >People: {{ people.name }}</p>
+    <p *ngFor="let specie of species">species: {{ specie.name }}</p>
+    <p *ngFor="let location of locations">locations: {{ location.name }}</p>
+    <p *ngFor="let vehicle of vehicles">vehicles: {{ vehicle.name }}</p>
+    -->
+</div>

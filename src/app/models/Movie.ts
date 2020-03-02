@@ -12,5 +12,5 @@ export class Movie {
     people: string[];
     species: string[];
     locations: string[];
-    vehicle: string[];
+    vehicles: string[];
 }

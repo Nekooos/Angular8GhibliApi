@@ -11,7 +11,7 @@ export class ContentService {
 
   constructor(private http: HttpService) { }
 
-  returnObjects(inputArray: string[], subject:string): Array<Object> {
+  returnObjects(inputArray: string[]): Array<Object> {
     let objectArray: Object[] = [];
     if (inputArray[0].length > this.url.length) {
       inputArray.forEach(url => {
@@ -22,4 +22,12 @@ export class ContentService {
     }
     return objectArray;
   }
+
+  returnObjectsByName(name: string) {
+    
+  }
+
+  validUrl = (inputOne:string, inputTwo:string) => inputOne > inputTwo ? true : false;
+
+  
 }

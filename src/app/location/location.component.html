@@ -4,5 +4,6 @@
     <li>Terrain: {{ location.terrain }}</li>
     <li>Above sea level: {{ location.surface_water }}</li>
     <li>residents: {{ location.residents }}</li>
-    <li>films: {{ location.films }}</li>
+    <li *ngFor="let movie of movies" let movie in movies>films: {{ movie.title }}</li>
 </ul>
+

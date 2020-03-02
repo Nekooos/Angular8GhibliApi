@@ -6,5 +6,5 @@ export class People {
     eye_color: string;
     hair_color: string;
     films: string[];
-    species: string;
+    specie: string;
 }
